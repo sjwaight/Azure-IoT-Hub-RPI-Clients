@@ -1,0 +1,13 @@
+[Unit]
+Description=SW IOT Audio
+After=multi-user.target
+ 
+[Service]
+Type=simple
+User=pi
+ExecStart=/usr/bin/python3 /home/pi/Downloads/azure-iot-samples-python-master/iot-hub/audiosw.py
+Restart=always
+RestartSec=5
+ 
+[Install]
+WantedBy=multi-user.target
